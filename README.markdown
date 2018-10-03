@@ -23,6 +23,14 @@ Template applied in /Users/hughj/Development/junk/./kigaraba-spark
 ```
 Once complete, you can cd in the newly-created project folder and run sbt commands.  Your development can begin!
 
+Running Your Code
+-----------------
+Spark projects are a little odd in that you typically mark spark jars PROVIDED.  This creates a problem
+when you try to run your shiny new spark thing using SBT run.  
+I added a little hack I found on the internet that puts the PROVIDED jars back on the run classpath so
+SBT runMain will work (for local jobs).  Feel free to rip this out; its well bracketed.  It will not 
+change your assembly in anyway.
+
 Template license
 ----------------
 Written in 2018 by Hugh Jamieson jamiesoh@oclc.org
